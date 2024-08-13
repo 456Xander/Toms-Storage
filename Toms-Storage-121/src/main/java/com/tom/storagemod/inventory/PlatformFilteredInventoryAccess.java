@@ -34,7 +34,7 @@ public class PlatformFilteredInventoryAccess implements IInventoryAccess, IPrior
 			}
 
 			@Override
-			public ItemStack[] prepForOffThread(Level level) {
+			public SlotInformation[] prepForOffThread(Level level) {
 				filter.getItemPred().updateState();
 				return super.prepForOffThread(level);
 			}

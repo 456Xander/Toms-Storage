@@ -20,6 +20,10 @@ public class InventorySlot {
 		return handler.getStackInSlot(id);
 	}
 
+	public long getCapacity() {
+		return handler.getSlotLimit(id);
+	}
+
 	public ItemStack extract(int amount) {
 		ItemStack is = handler.extractItem(id, amount, false);
 		if (!is.isEmpty())notifyChange();
